@@ -25,7 +25,7 @@ export function Contact({ isOverlay = false }: { isOverlay?: boolean }) {
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
     try {
-      const response = await fetch('http://localhost:5000/api/feedback', {
+      const response = await fetch('/api/feedback', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -33,15 +33,18 @@ export function Contact({ isOverlay = false }: { isOverlay?: boolean }) {
         body: JSON.stringify(data),
       });
 
+      const result = await response.json();
+
       if (!response.ok) {
-        throw new Error('Failed to send feedback');
+        throw new Error(result.error || 'Failed to send feedback');
       }
 
       setIsSuccess(true);
       setTimeout(() => setIsSuccess(false), 5000);
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert('Something went wrong. Please try again later.');
+      const errorMessage = error instanceof Error ? error.message : 'Something went wrong. Please check if the backend server is running.';
+      alert(`Error: ${errorMessage}`);
     } finally {
       setIsSubmitting(false);
     }

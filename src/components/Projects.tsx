@@ -11,7 +11,7 @@ export function Projects({ isOverlay = false }: { isOverlay?: boolean }) {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        
+
 
           <ProjectCard
             index={0}
@@ -21,7 +21,7 @@ export function Projects({ isOverlay = false }: { isOverlay?: boolean }) {
             html_url="https://github.com"
             homepage="https://demo.com"
             image="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000"
-            // figma_url="YOUR_FIGMA_LINK_HERE" 
+          // figma_url="YOUR_FIGMA_LINK_HERE" 
           />
 
           <ProjectCard
@@ -32,18 +32,18 @@ export function Projects({ isOverlay = false }: { isOverlay?: boolean }) {
             html_url="https://github.com"
             homepage="https://demo.com"
             image="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=1000"
-            // figma_url="YOUR_FIGMA_LINK_HERE"
+          // figma_url="YOUR_FIGMA_LINK_HERE"
           />
 
           <ProjectCard
             index={2}
-            name="Portfolio"
+            name="Task-Manager"
             description="DeFi dashboard with real-time analytics and multi-chain wallet support."
             topics={['React', 'MongoDB', 'Node.js', 'Tailwind']}
             html_url="https://github.com"
             homepage="https://demo.com"
             image="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=1000"
-            // figma_url="YOUR_FIGMA_LINK_HERE"
+          // figma_url="YOUR_FIGMA_LINK_HERE"
           />
 
         </div>

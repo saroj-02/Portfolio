@@ -14,11 +14,18 @@ app.use(cors());
 app.use(express.json());
 
 // Database Connection
-const MONGODB_URI = process.env.MONGODB_URI || 'YOUR_MONGODB_ATLAS_CONNECTION_STRING';
+const MONGODB_URI = process.env.MONGODB_URI || '';
+
+if (!MONGODB_URI || MONGODB_URI === 'YOUR_MONGODB_ATLAS_CONNECTION_STRING') {
+  console.error('CRITICAL: MONGODB_URI is not configured correctly in .env file!');
+}
 
 mongoose.connect(MONGODB_URI)
-  .then(() => console.log('Connected to MongoDB Atlas'))
-  .catch((err) => console.error('Error connecting to MongoDB:', err));
+  .then(() => console.log('✅ Connected to MongoDB Atlas'))
+  .catch((err) => {
+    console.error('❌ Error connecting to MongoDB:', err.message);
+    console.error('Please ensure your IP address is whitelisted in MongoDB Atlas and the connection string is correct.');
+  });
 
 // Routes
 app.post('/api/feedback', async (req: Request, res: Response) => {
