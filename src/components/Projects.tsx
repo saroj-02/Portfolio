@@ -18,8 +18,8 @@ export function Projects({ isOverlay = false }: { isOverlay?: boolean }) {
             name="Sarreya Chat"
             description="A generative art platform powered by custom stable diffusion models and React."
             topics={['React.js', 'Node.js', 'Tailwind', 'Clerk']}
-            html_url="https://github.com"
-            homepage="https://demo.com"
+            html_url="#"
+            homepage="#"
             image="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000"
           // figma_url="YOUR_FIGMA_LINK_HERE" 
           />
@@ -29,8 +29,8 @@ export function Projects({ isOverlay = false }: { isOverlay?: boolean }) {
             name="Portfolio"
             description="DeFi dashboard with real-time analytics and multi-chain wallet support."
             topics={['React', 'MongoDB', 'Node.js', 'Tailwind']}
-            html_url="https://github.com"
-            homepage="https://demo.com"
+            html_url="https://github.com/saroj-02/Portfolio"
+            homepage="https://portfolio-one-opal-gx1iz8nex9.vercel.app/"
             image="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=1000"
           // figma_url="YOUR_FIGMA_LINK_HERE"
           />
@@ -40,8 +40,8 @@ export function Projects({ isOverlay = false }: { isOverlay?: boolean }) {
             name="Task-Manager"
             description="DeFi dashboard with real-time analytics and multi-chain wallet support."
             topics={['React', 'MongoDB', 'Node.js', 'Tailwind']}
-            html_url="https://github.com"
-            homepage="https://demo.com"
+            html_url="https://github.com/saroj-02/Task-Manager"
+            homepage="https://task-manager-2k26.vercel.app/"
             image="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=1000"
           // figma_url="YOUR_FIGMA_LINK_HERE"
           />
