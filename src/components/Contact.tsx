@@ -24,27 +24,34 @@ export function Contact({ isOverlay = false }: { isOverlay?: boolean }) {
 
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
+    console.log('Attempting to send feedback:', data);
     try {
       const response = await fetch('/api/feedback', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json',
         },
         body: JSON.stringify(data),
       });
 
-      const result = await response.json();
-
-      if (!response.ok) {
-        throw new Error(result.error || 'Failed to send feedback');
+      const contentType = response.headers.get('content-type');
+      let result;
+      if (contentType && contentType.includes('application/json')) {
+        result = await response.json();
       }
 
+      if (!response.ok) {
+        throw new Error(result?.error || result?.message || `Server responded with ${response.status}: ${response.statusText}`);
+      }
+
+      console.log('Feedback sent successfully:', result);
       setIsSuccess(true);
       setTimeout(() => setIsSuccess(false), 5000);
     } catch (error) {
-      console.error('Error submitting form:', error);
-      const errorMessage = error instanceof Error ? error.message : 'Something went wrong. Please check if the backend server is running.';
-      alert(`Error: ${errorMessage}`);
+      console.error('Submission error details:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown connection error. Please ensure the backend server is running.';
+      alert(`Message not sent: ${errorMessage}`);
     } finally {
       setIsSubmitting(false);
     }

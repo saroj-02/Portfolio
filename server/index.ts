@@ -29,13 +29,27 @@ mongoose.connect(MONGODB_URI)
 
 // Routes
 app.post('/api/feedback', async (req: Request, res: Response) => {
+  console.log('📩 Incoming Feedback Request:', {
+    method: req.method,
+    headers: req.headers['content-type'],
+    body: req.body
+  });
+  
   try {
     const { name, email, subject, message } = req.body;
+    
+    if (!name || !email || !subject || !message) {
+      console.warn('⚠️ Validation failed: Missing required fields');
+      return res.status(400).json({ error: 'All fields are required' });
+    }
+
     const newFeedback = new Feedback({ name, email, subject, message });
     await newFeedback.save();
+    
+    console.log('✅ Feedback stored successfully for:', email);
     res.status(201).json({ message: 'Feedback stored successfully!' });
   } catch (error) {
-    console.error('Error storing feedback:', error);
+    console.error('❌ Error storing feedback:', error);
     res.status(500).json({ error: 'Failed to store feedback' });
   }
 });
