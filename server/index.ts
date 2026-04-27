@@ -2,9 +2,14 @@ import express, { Request, Response } from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import Feedback from './models/Feedback';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import Feedback from './models/Feedback.js';
 
 dotenv.config();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -24,29 +29,22 @@ mongoose.connect(MONGODB_URI)
   .then(() => console.log('✅ Connected to MongoDB Atlas'))
   .catch((err) => {
     console.error('❌ Error connecting to MongoDB:', err.message);
-    console.error('Please ensure your IP address is whitelisted in MongoDB Atlas and the connection string is correct.');
   });
+
+// Serve Static Files from the frontend's dist folder
+const distPath = path.join(__dirname, '../dist');
+app.use(express.static(distPath));
 
 // Routes
 app.post('/api/feedback', async (req: Request, res: Response) => {
-  console.log('📩 Incoming Feedback Request:', {
-    method: req.method,
-    headers: req.headers['content-type'],
-    body: req.body
-  });
-  
+  console.log('📩 Incoming Feedback Request:', req.body);
   try {
     const { name, email, subject, message } = req.body;
-    
     if (!name || !email || !subject || !message) {
-      console.warn('⚠️ Validation failed: Missing required fields');
       return res.status(400).json({ error: 'All fields are required' });
     }
-
     const newFeedback = new Feedback({ name, email, subject, message });
     await newFeedback.save();
-    
-    console.log('✅ Feedback stored successfully for:', email);
     res.status(201).json({ message: 'Feedback stored successfully!' });
   } catch (error) {
     console.error('❌ Error storing feedback:', error);
@@ -54,9 +52,14 @@ app.post('/api/feedback', async (req: Request, res: Response) => {
   }
 });
 
-// Basic route for health check
-app.get('/', (req, res) => {
+// Health check
+app.get('/api/health', (req, res) => {
   res.send('Portfolio Backend is running');
+});
+
+// Catch-all route to serve the frontend for any other request
+app.get('*', (req, res) => {
+  res.sendFile(path.join(distPath, 'index.html'));
 });
 
 app.listen(PORT, () => {
