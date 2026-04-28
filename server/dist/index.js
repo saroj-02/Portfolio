@@ -24,7 +24,8 @@ mongoose.connect(MONGODB_URI)
     console.error('❌ Error connecting to MongoDB:', err.message);
 });
 // Serve Static Files from the frontend's dist folder
-const distPath = path.join(__dirname, '../dist');
+const isCompiled = __dirname.split(path.sep).pop() === 'dist';
+const distPath = path.resolve(__dirname, isCompiled ? '../../dist' : '../dist');
 app.use(express.static(distPath));
 // Routes
 app.post('/api/feedback', async (req, res) => {
