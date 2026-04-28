@@ -58,8 +58,12 @@ app.get('/api/health', (req, res) => {
 });
 
 // Catch-all route to serve the frontend for any other request
-app.get('(.*)', (req, res) => {
-  res.sendFile(path.join(distPath, 'index.html'));
+app.use((req, res, next) => {
+  if (req.method === 'GET' || req.method === 'HEAD') {
+    res.sendFile(path.join(distPath, 'index.html'));
+  } else {
+    next();
+  }
 });
 
 app.listen(PORT, () => {
