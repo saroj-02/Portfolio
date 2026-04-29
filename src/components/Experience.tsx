@@ -42,7 +42,7 @@ export function Experience({ isOverlay = false }: { isOverlay?: boolean }) {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-20">
           <h2 className="text-sm font-bold text-primary uppercase tracking-widest mb-4">Journey</h2>
-          <h3 className="text-4xl md:text-5xl font-bold font-outfit">My Professional <span className="text-gradient">Timeline.</span></h3>
+          <h3 className="text-4xl md:text-5xl font-bold font-outfit">My Educational <span className="text-gradient">Timeline.</span></h3>
         </div>
 
         <div className="relative">

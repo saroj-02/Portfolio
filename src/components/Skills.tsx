@@ -15,15 +15,15 @@ const skills = [
     color: 'bg-emerald-500/10'
   },
   {
-    category: 'Mobile & AI',
+    category: 'App Dev',
     icon: <Smartphone className="text-purple-500" />,
-    items: ['React Native', 'OpenAI API', 'TensorFlow', 'PyTorch'],
+    items: ['Kotlin','React Native', 'Flutter', 'Blender'],
     color: 'bg-purple-500/10'
   },
   {
     category: 'Tools',
     icon: <Cpu className="text-orange-500" />,
-    items: ['Git', 'Clerk', 'AWS', 'Vercel', 'Antigravity'],
+    items: ['Git', 'Clerk', 'AWS', 'Render', 'Antigravity'],
     color: 'bg-orange-500/10'
   }
 ];
