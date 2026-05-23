@@ -144,7 +144,7 @@ export function Projects({ isOverlay = false }: { isOverlay?: boolean }) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <ProjectCard
             index={10}
-            name="Fitness Tracker App (Demo)"
+            name="Fitness Tracker App"
             description="A premium cross-platform mobile application built with React Native and Firebase. It offers personalized workout routines, real-time activity tracking, and a sleek user interface designed for maximum engagement and performance."
             topics={['React Native', 'Firebase', 'Expo', 'NativeWind']}
             html_url="#"
