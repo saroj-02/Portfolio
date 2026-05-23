@@ -146,7 +146,7 @@ export function Projects({ isOverlay = false }: { isOverlay?: boolean }) {
             index={10}
             name="Fitness Tracker App"
             description="A premium cross-platform mobile application built with React Native and Firebase. It offers personalized workout routines, real-time activity tracking, and a sleek user interface designed for maximum engagement and performance."
-            topics={['React Native', 'Firebase', 'Expo', 'NativeWind']}
+            topics={['Kotlin', 'Jetpack Compose', 'Firebase', 'Android Studio']}
             html_url="#"
             homepage="#"
             image="https://images.unsplash.com/photo-1526502613317-0624d77ce606?q=80&w=1000"
