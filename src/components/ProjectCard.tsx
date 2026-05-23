@@ -11,6 +11,7 @@ interface ProjectCardProps {
   topics: string[];
   index: number;
   stargazers_count?: number;
+  status?: 'completed' | 'in-development' | 'ongoing';
 }
 
 export const ProjectCard = ({ 
@@ -22,7 +23,8 @@ export const ProjectCard = ({
   figma_url,
   topics, 
   index,
-  stargazers_count 
+  stargazers_count,
+  status
 }: ProjectCardProps) => {
   return (
     <motion.div
@@ -73,6 +75,20 @@ export const ProjectCard = ({
             </a>
           )}
         </div>
+        
+        {status && (
+          <div className="absolute top-4 left-4 z-20">
+            <span className={`px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider shadow-lg border ${
+              status === 'completed' 
+                ? 'bg-emerald-500/90 text-white border-emerald-400' 
+                : status === 'in-development'
+                ? 'bg-amber-500/90 text-white border-amber-400'
+                : 'bg-blue-500/90 text-white border-blue-400'
+            }`}>
+              {status === 'in-development' ? 'Under Development' : status}
+            </span>
+          </div>
+        )}
       </div>
 
       <div className="p-8">
