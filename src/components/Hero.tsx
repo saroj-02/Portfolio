@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Download, ChevronRight } from 'lucide-react';
 
-const words = ['Full Stack Developer', 'Software Developer', 'Data Analyst', 'Problem Solver'];
+const words = ['Full Stack Developer', 'Software Developer', 'Android App Developer', 'Data Analyst', 'Problem Solver'];
 
 export function Hero({ isOverlay = false }: { isOverlay?: boolean }) {
   const [index, setIndex] = useState(0);
