@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Award, ExternalLink, Calendar, ShieldCheck } from 'lucide-react';
 import { Be10X_certificate, Build_With_AI, data_science, gen_ai, Internship, machine_learning } from '../assets';
 
-const images = import.meta.glob('../assets/*.{png,jpg,jpeg}', { eager: true });
+const images = import.meta.glob('../assets/*.{png,jpg,jpeg,webp}', { eager: true });
 
 const certificates = [
   {
@@ -131,6 +131,7 @@ export function Certificates({ isOverlay = false }: { isOverlay?: boolean }) {
                 <img 
                   src={getDirectLink(cert.image)} 
                   alt={cert.title}
+                  loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />

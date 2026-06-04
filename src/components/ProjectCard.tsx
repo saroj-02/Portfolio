@@ -38,6 +38,7 @@ export const ProjectCard = ({
         <img
           src={image || 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000'}
           alt={name}
+          loading="lazy"
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-6">

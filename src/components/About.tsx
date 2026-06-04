@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import profilePhoto from '../s_photo.jpeg';
+import profilePhoto from '../s_photo.webp';
 
 export function About({ isOverlay = false }: { isOverlay?: boolean }) {
   return (
@@ -13,7 +13,7 @@ export function About({ isOverlay = false }: { isOverlay?: boolean }) {
             className="relative"
           >
             <div className="relative z-10 rounded-3xl overflow-hidden border-8 border-white dark:border-slate-900 shadow-2xl bg-slate-100 dark:bg-slate-800">
-              <img src={profilePhoto} alt="Profile" className="w-full aspect-square object-cover" />
+              <img src={profilePhoto} alt="Profile" className="w-full aspect-square object-cover" fetchPriority="high" />
             </div>
             <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary rounded-3xl -z-0 animate-pulse" />
             <div className="absolute -top-6 -left-6 w-24 h-24 border-4 border-slate-200 dark:border-slate-800 rounded-3xl -z-0" />
