@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { Award, ExternalLink, Calendar, ShieldCheck } from 'lucide-react';
-import cert1 from '../assets/cert1.png';
 import { Be10X_certificate, Build_With_AI, data_science, gen_ai, Internship, machine_learning } from '../assets';
 
 const images = import.meta.glob('../assets/*.{png,jpg,jpeg}', { eager: true });

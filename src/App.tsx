@@ -1,15 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
-import { Navbar } from './components/Navbar';
-import { Hero } from './components/Hero';
-import { About } from './components/About';
-import { Skills } from './components/Skills';
-import { Projects } from './components/Projects';
-import { Experience } from './components/Experience';
-import { Contact } from './components/Contact';
-import { Footer } from './components/Footer';
-import { Certificates } from './components/Certificates';
-import { CustomCursor } from './components/CustomCursor';
+import { Navbar, Hero, About, Skills, Projects, Experience, Contact, Footer, Certificates, CustomCursor } from './components';
+
 
 const sections = ['hero', 'about', 'skills', 'projects', 'experience', 'certificates', 'contact'];
 
