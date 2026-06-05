@@ -84,7 +84,7 @@ export function Hero({ isOverlay = false }: { isOverlay?: boolean }) {
             <ChevronRight className="group-hover:translate-x-1 transition-transform inline-block" />
           </a>
           <a
-            href="https://drive.google.com/file/d/11vLZixC4ezAYB9tq-y8MvyDXJkKh2gPZ/view?usp=sharing"
+            href="https://drive.google.com/file/d/16lVQ9vXRMvVdw9UeFhZeMJu5ds2Wd-jE/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-4 bg-white dark:bg-slate-900 text-slate-900 dark:text-white rounded-2xl font-semibold border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800 hover:-translate-y-1 transition-all flex items-center gap-2"
