@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Award, ExternalLink, Calendar, ShieldCheck } from 'lucide-react';
-import { Be10X_certificate, Build_With_AI, data_science, gen_ai, Internship, machine_learning } from '../assets';
+import { Be10X_certificate, Build_With_AI, CodeAlpha, Cognifyz, data_science, gen_ai, Internship, machine_learning } from '../assets';
 
 const images = import.meta.glob('../assets/*.{png,jpg,jpeg,webp}', { eager: true });
 
@@ -52,7 +52,24 @@ const certificates = [
     image: Internship,
     link: 'https://drive.google.com/file/d/1tdxOoBw--VMoD25iyJuUkNjnMAX0F-5g/view?usp=sharing',
     skills: ['MongoDB', 'Express.js', 'React', 'Node.js']
-  }
+  },
+  {
+    title: 'Full stack Web Development',
+    issuer: 'CodeAlpha',
+    date: 'June 2026',
+    image: CodeAlpha,
+    link: 'https://drive.google.com/file/d/1wkFwXEaVPq1HW2Uwbi_VSt85v8p3u9S9/view?usp=sharing',
+    skills: ['MongoDB','Express.js','Node.js','React.js']
+  },  
+  {
+    title: 'Web Development',
+    issuer: 'Cognifyz IT Solution',
+    date: 'May 2026',
+    image: Cognifyz,
+    link: 'https://drive.google.com/file/d/1uKTLRBjgvFOXgux2pZky6qbjqSVN2Cul/view?usp=sharing',
+    skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js', 'Express.js', 'MongoDB']
+  }  
+    
   
 ];
 

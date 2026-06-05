@@ -5,7 +5,7 @@ const experiences = [
   {
     type: 'edu',
     title: 'BCA',
-    company: 'Ravenshaw univercity',
+    company: 'Ravenshaw University',
     location: 'Cuttack, Odisha',
     period: '2024 - present',
     description: '---'
@@ -13,10 +13,26 @@ const experiences = [
   {
     type: 'work',
     title: 'Full Stack Developer',
+    company: 'CodeAlpha',
+    location: 'Work From Home',
+    period: 'May 2026 - June 2026',
+    description: 'Developed and deployed full-stack web applications using React, Node.js, Express, and MongoDB. Built responsive user interfaces and designed RESTful APIs.'
+  },
+  {
+    type: 'work',
+    title: 'Web Developer Intern',
+    company: 'Cognifyz IT Solution',
+    location: 'Work From Home',
+    period: 'April 2026 - May 2026',
+    description: 'Built interactive frontend pages using HTML5, CSS3, and JavaScript/React. Integrated frontend components with backend databases and verified cross-browser responsiveness.'
+  },
+  {
+    type: 'work',
+    title: 'Full Stack Developer',
     company: 'InternsEllite',
     location: 'Work From Home',
     period: 'Jul 2025 - Oct 2025',
-    description: 'Leading a team of 5 developers to build a multi-tenant SaaS platform. Optimized API response times by 40% using Redis caching.'
+    description: 'Leading a team of 3 developers to build a web application. Optimized API response times by 30% using Redis caching.'
   },
   {
     type: 'edu',
@@ -42,7 +58,7 @@ export function Experience({ isOverlay = false }: { isOverlay?: boolean }) {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-20">
           <h2 className="text-sm font-bold text-primary uppercase tracking-widest mb-4">Journey</h2>
-          <h3 className="text-4xl md:text-5xl font-bold font-outfit">My Educational <span className="text-gradient">Timeline.</span></h3>
+          <h3 className="text-4xl md:text-5xl font-bold font-outfit">My Educational & Work <span className="text-gradient">Timeline.</span></h3>
         </div>
 
         <div className="relative">

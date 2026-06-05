@@ -18,5 +18,7 @@ export { default as Social_Media } from './Social-Media.webp';
 export { default as Task_Manager } from './Task-Manager.webp';
 export { default as portfolio } from './portfolio.webp';
 export { default as surreya_chat } from './surreya-chat.webp';
+export { default as CodeAlpha } from './CodeAlpha.png';
+export { default as Cognifyz } from './Cognifyz.png';
 
 export * from './projectsData';
