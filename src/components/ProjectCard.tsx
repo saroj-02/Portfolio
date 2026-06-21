@@ -12,6 +12,7 @@ interface ProjectCardProps {
   index: number;
   stargazers_count?: number;
   status?: 'completed' | 'in-development' | 'ongoing';
+  onShowUnderDevelopment?: (projectName: string) => void;
 }
 
 export const ProjectCard = ({ 
@@ -24,8 +25,11 @@ export const ProjectCard = ({
   topics, 
   index,
   stargazers_count,
-  status
+  status,
+  onShowUnderDevelopment
 }: ProjectCardProps) => {
+  const isDemoUnderDev = !homepage || homepage === '#' || homepage.startsWith('#');
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -55,11 +59,17 @@ export const ProjectCard = ({
           )}
           {homepage && (
             <a
-              href={homepage}
-              target="_blank"
+              href={isDemoUnderDev ? undefined : homepage}
+              onClick={(e) => {
+                if (isDemoUnderDev) {
+                  e.preventDefault();
+                  onShowUnderDevelopment?.(name);
+                }
+              }}
+              target={isDemoUnderDev ? undefined : "_blank"}
               rel="noopener noreferrer"
-              className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-slate-950 hover:bg-primary hover:text-white transition-colors"
-              title="Live Demo"
+              className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-slate-950 hover:bg-primary hover:text-white transition-colors cursor-pointer"
+              title={isDemoUnderDev ? "Under Development" : "Live Demo"}
             >
               <ExternalLink size={20} />
             </a>

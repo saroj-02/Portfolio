@@ -38,7 +38,7 @@ export const projectsData: Project[] = [
     name: "Sarreya Chat",
     description: "Engineered a comprehensive real-time chat application using Next.js and Convex to enable instant messaging and low-latency peer-to-peer video/audio calls. Implemented advanced features including dynamic group chats, real-time read receipts, message reactions, and secure user authentication via Clerk.",
     topics: ['Next.js', 'Convex', 'Tailwind', 'Clerk'],
-    html_url: "#",
+    html_url: "https://github.com/saroj-02/Live-Chat",
     homepage: "#",
     image: surreya_chat,
     status: "ongoing",
@@ -105,7 +105,7 @@ export const projectsData: Project[] = [
     description: "An advanced social media platform featuring real-time messaging, profile management, post sharing, and a modern, interactive user interface.",
     topics: ['React', 'Express', 'Node.js', 'Vanila CSS'],
     html_url: "https://github.com/saroj-02/Social-Media",
-    homepage: "#",
+    homepage: "https://social-media-6tlu.onrender.com/",
     image: Social_Media,
     status: "completed",
     type: "web"
@@ -116,7 +116,7 @@ export const projectsData: Project[] = [
     description: "A comprehensive project management platform enabling users to create projects, assign tasks, track progress, and collaborate effectively with team members.",
     topics: ['React', 'Express', 'Node.js', 'Vanila CSS'],
     html_url: "https://github.com/saroj-02/Progect-Manager",
-    homepage: "#",
+    homepage: "https://project-manager-ct9s.onrender.com/",
     image: Project_Management,
     status: "completed",
     type: "web"
@@ -127,7 +127,7 @@ export const projectsData: Project[] = [
     description: "An intuitive e-commerce platform with product browsing, cart functionality, secure checkout, and order management capabilities.",
     topics: ['React', 'Express', 'Node.js', 'Vanila CSS'],
     html_url: "https://github.com/saroj-02/E-Commerce-Web",
-    homepage: "#",
+    homepage: "https://e-commerce-web-kwi3.onrender.com",
     image: E_commerce_web,
     status: "completed",
     type: "web"
@@ -138,7 +138,7 @@ export const projectsData: Project[] = [
     description: "Built a responsive boarding school management and information portal featuring school listings, advanced search, admission inquiry forms, content management, and user-friendly navigation.",
     topics: ['React', 'Express', 'Node.js', 'Vanila CSS'],
     html_url: "https://github.com/saroj-02/Aura-Boarding-Schools",
-    homepage: "#",
+    homepage: "https://aura-boarding-schools.onrender.com",
     image: Boarding_Schools,
     status: "completed",
     type: "web"
@@ -160,7 +160,7 @@ export const projectsData: Project[] = [
     description: "A comprehensive Audit Maker platform enabling users to create projects, assign tasks, track progress, and collaborate effectively with team members.",
     topics: ['Python', 'Django'],
     html_url: "https://github.com/saroj-02/Credex-App",
-    homepage: "#",
+    homepage: "https://credex-app-san4.onrender.com",
     image: Audit_Maker,
     status: "completed",
     type: "web"
@@ -171,7 +171,7 @@ export const projectsData: Project[] = [
     description: "A premium cross-platform mobile application built with React Native and Firebase. It offers personalized workout routines, real-time activity tracking, and a sleek user interface designed for maximum engagement and performance.",
     topics: ['Python', 'Django'],
     html_url: "https://github.com/saroj-02/Lead-Distribution-System",
-    homepage: "#",
+    homepage: "https://lead-distribution-system-nxdj.onrender.com",
     image: Lead_Distribution_System,
     status: "completed",
     type: "web"

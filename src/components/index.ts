@@ -9,3 +9,4 @@ export * from './Contact';
 export * from './Footer';
 export * from './Certificates';
 export * from './CustomCursor';
+export * from './DevModal';

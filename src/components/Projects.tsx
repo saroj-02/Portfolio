@@ -1,7 +1,12 @@
+import { useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
 import { ProjectCard } from './ProjectCard';
 import { projectsData } from '../assets';
+import { DevModal } from './DevModal';
 
 export function Projects({ isOverlay = false }: { isOverlay?: boolean }) {
+  const [selectedProject, setSelectedProject] = useState<string | null>(null);
+
   return (
     <section id={isOverlay ? undefined : "projects"} className="py-24 relative overflow-hidden bg-slate-50 dark:bg-slate-900/50">
       <div className="max-w-7xl mx-auto px-6">
@@ -32,6 +37,7 @@ export function Projects({ isOverlay = false }: { isOverlay?: boolean }) {
                 image={project.image}
                 status={project.status}
                 figma_url={project.figma_url}
+                onShowUnderDevelopment={(name) => setSelectedProject(name)}
               />
             ))}
         </div>
@@ -58,11 +64,20 @@ export function Projects({ isOverlay = false }: { isOverlay?: boolean }) {
                 image={project.image}
                 status={project.status}
                 figma_url={project.figma_url}
+                onShowUnderDevelopment={(name) => setSelectedProject(name)}
               />
             ))}
         </div>
 
       </div>
+      <AnimatePresence>
+        {selectedProject && (
+          <DevModal
+            projectName={selectedProject}
+            onClose={() => setSelectedProject(null)}
+          />
+        )}
+      </AnimatePresence>
     </section>
   );
 }
