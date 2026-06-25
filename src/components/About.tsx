@@ -25,7 +25,7 @@ export function About({ isOverlay = false }: { isOverlay?: boolean }) {
             viewport={{ once: true }}
           >
             <h2 className="text-sm font-bold text-primary uppercase tracking-widest mb-4">About Me</h2>
-            <h3 className="text-4xl md:text-5xl font-bold font-outfit mb-6">Mastering the art of <span className="text-gradient">software & web development.</span></h3>
+            <h3 className="text-4xl md:text-5xl font-bold font-outfit mb-6">Mastering the art of <span className="text-gradient">software | web | AI/ML development.</span></h3>
             <div className="space-y-6 text-slate-600 dark:text-slate-400 leading-relaxed">
               <p>I'm a passionate developer with a deep love for creating clean, efficient, and user-centric digital solutions. With a background in computer applications and years of experience in the field, I've honed my skills in both frontend and backend technologies.</p>
               <p>My approach is simple: I believe in building software that not only works perfectly but also looks beautiful and feels intuitive to the user.</p>
@@ -41,6 +41,7 @@ export function About({ isOverlay = false }: { isOverlay?: boolean }) {
                 <p className="text-sm font-medium">Projects Completed</p>
               </div>
             </div>
+            
           </motion.div>
         </div>
       </div>

@@ -38,7 +38,7 @@ export function Skills({ isOverlay = false }: { isOverlay?: boolean }) {
         <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-4">
           <div className="max-w-2xl">
             <h2 className="text-sm font-bold text-primary uppercase tracking-widest mb-4">Expertise</h2>
-            <h3 className="text-4xl md:text-5xl font-bold font-outfit">Web Development <span className="text-gradient">Skills.</span></h3>
+            <h3 className="text-4xl md:text-5xl font-bold font-outfit">AI/ML | Web Development <span className="text-gradient">Skills.</span></h3>
           </div>
           <p className="text-slate-600 dark:text-slate-400 max-w-sm">
             Clear separation of frontend and backend skills so recruiters can quickly understand your strengths.
