@@ -1,7 +1,22 @@
 import { motion } from 'framer-motion';
-import { Server, Smartphone, Cpu, Layout } from 'lucide-react';
+import { Cpu, Layout, Brain } from 'lucide-react';
 
 const skills = [
+  {
+    category: 'AI/ML',
+    icon: <Brain className="text-emerald-500" />,
+    subSections: [
+      {
+        title: 'Core AI & ML',
+        items: ['Machine Learning', 'Deep Learning', 'Neural Networks', 'Natural Language Processing', 'Computer Vision', 'Data Science']
+      },
+      {
+        title: 'Models & Libs',
+        items: ['PyTorch', 'TensorFlow', 'Scikit-Learn', 'Pandas', 'NumPy', 'Hugging Face', 'LangChain']
+      }
+    ],
+    color: 'bg-gradient-to-br from-emerald-500/10 via-teal-100/60 to-cyan-500/10'
+  },
   {
     category: 'Web Dev',
     icon: <Layout className="text-sky-500" />,
@@ -18,15 +33,9 @@ const skills = [
     color: 'bg-gradient-to-br from-sky-500/10 via-indigo-100/60 to-emerald-500/10'
   },
   {
-    category: 'App Dev',
-    icon: <Smartphone className="text-purple-500" />,
-    items: ['Kotlin', 'Android Studio', 'Firebase','Jetpack Compose','JIRA','Coil'],
-    color: 'bg-purple-500/10'
-  },
-  {
     category: 'Tools',
     icon: <Cpu className="text-orange-500" />,
-    items: ['Git', 'Render', 'AWS', 'Docker', 'VS Code','Antigravity', 'Figma', 'Postman','Blender'],
+    items: ['Git', 'Render', 'AWS', 'Docker', 'VS Code','Antigravity', 'Figma','Blender', 'Jupyter', 'Google Colab'],
     color: 'bg-orange-500/10'
   }
 ];
@@ -40,12 +49,10 @@ export function Skills({ isOverlay = false }: { isOverlay?: boolean }) {
             <h2 className="text-sm font-bold text-primary uppercase tracking-widest mb-4">Expertise</h2>
             <h3 className="text-4xl md:text-5xl font-bold font-outfit">AI/ML | Web Development <span className="text-gradient">Skills.</span></h3>
           </div>
-          <p className="text-slate-600 dark:text-slate-400 max-w-sm">
-            Clear separation of frontend and backend skills so recruiters can quickly understand your strengths.
-          </p>
+          
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skills.map((skill, i) => (
             <motion.div
               key={skill.category}

@@ -28,7 +28,7 @@ export interface Project {
   homepage: string;
   image: string;
   status: 'ongoing' | 'completed';
-  type: 'web' | 'app';
+  type: 'web';
   figma_url?: string;
 }
 
@@ -145,17 +145,6 @@ export const projectsData: Project[] = [
   },
   {
     index: 10,
-    name: "Fitness Tracker App",
-    description: "A premium cross-platform mobile application built with React Native and Firebase. It offers personalized workout routines, real-time activity tracking, and a sleek user interface designed for maximum engagement and performance.",
-    topics: ['Kotlin', 'Jetpack Compose', 'Firebase', 'Android Studio'],
-    html_url: "#",
-    homepage: "#",
-    image: '#',
-    status: "ongoing",
-    type: "app"
-  },
-  {
-    index: 11,
     name: "Audit Maker",
     description: "A comprehensive Audit Maker platform enabling users to create projects, assign tasks, track progress, and collaborate effectively with team members.",
     topics: ['Python', 'Django'],
@@ -166,7 +155,7 @@ export const projectsData: Project[] = [
     type: "web"
   },
   {
-    index: 12,
+    index: 11,
     name: "Lead Distribution System",
     description: "A premium cross-platform mobile application built with React Native and Firebase. It offers personalized workout routines, real-time activity tracking, and a sleek user interface designed for maximum engagement and performance.",
     topics: ['Python', 'Django'],
