@@ -16,7 +16,8 @@ import {
   Social_Media,
   Task_Manager,
   portfolio,
-  surreya_chat
+  surreya_chat,
+  ResumeParser
 } from './index';
 
 export interface Project {
@@ -28,7 +29,7 @@ export interface Project {
   homepage: string;
   image: string;
   status: 'ongoing' | 'completed';
-  type: 'web';
+  type: 'web' | 'ai-ml';
   figma_url?: string;
 }
 
@@ -164,5 +165,16 @@ export const projectsData: Project[] = [
     image: Lead_Distribution_System,
     status: "completed",
     type: "web"
+  },
+  {
+    index: 12,
+    name: "AI Resume Parser & Dashboard",
+    description: "An elegant, high-performance AI Resume Parser and Dashboard built with Streamlit and Python. It automatically extracts key candidate details like Name, Email, and Technical Skills using spaCy NLP Named Entity Recognition (NER) and robust regex parsing. Features an interactive glassmorphic dashboard with ATS-ready exports.",
+    topics: ['Python', 'Streamlit', 'NLP', 'spaCy', 'pdfplumber'],
+    html_url: "https://github.com/saroj-02/Resume-Parser",
+    homepage: "https://resume-parser-w5d4.onrender.com",
+    image: ResumeParser,
+    status: "ongoing",
+    type: "ai-ml"
   }
 ];

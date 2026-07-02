@@ -21,5 +21,6 @@ export { default as surreya_chat } from './surreya-chat.webp';
 export { default as CodeAlpha } from './CodeAlpha.png';
 export { default as Cognifyz } from './Cognifyz.png';
 export { default as Deloitte } from './DataAnalyticsDeloitte.png';
+export { default as ResumeParser } from './ResumeParser.png';
 
 export * from './projectsData';
