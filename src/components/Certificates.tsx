@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Award, ExternalLink, Calendar, ShieldCheck } from 'lucide-react';
-import { Be10X_certificate, Build_With_AI, CodeAlpha, Cognifyz, data_science, Deloitte, gen_ai, Internship, machine_learning } from '../assets';
-
+import { Be10X_certificate, Build_With_AI, CodeAlpha, Cognifyz, data_science, Deloitte, gen_ai, Internship, machine_learning, PinnacleLabs } from '../assets';
+ 
 const images = import.meta.glob('../assets/*.{png,jpg,jpeg,webp}', { eager: true });
 
 const certificates = [
@@ -76,6 +76,14 @@ const certificates = [
     image: Deloitte,
     link: 'https://drive.google.com/file/d/1oGsKqOIx01SD_AiDhOlEW1A1z8mp9cJi/view?usp=sharing',
     skills: ['Python','SQL','Excel']
+  },
+  {
+    title: 'Artificial Intelligence',
+    issuer: 'Pinnacle Labs',
+    date: 'July 2026',
+    image: PinnacleLabs,
+    link: 'https://drive.google.com/file/d/1tatPVe-uSYFwyiv8zkv5rYqIychUIb52/view?usp=sharing',
+    skills: ['Python', 'Deep Learning', 'Neural Networks', 'Machine Learning', 'NLP']
   }
   
 ];

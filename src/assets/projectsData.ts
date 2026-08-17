@@ -1,10 +1,4 @@
 import {
-  Be10X_certificate,
-  Build_With_AI,
-  data_science,
-  gen_ai,
-  Internship,
-  machine_learning,
   Audit_Maker,
   Boarding_Schools,
   Drive_Search,
@@ -17,7 +11,9 @@ import {
   Task_Manager,
   portfolio,
   surreya_chat,
-  ResumeParser
+  ResumeParser,
+  spam_message_detect,
+  ResumeScreening
 } from './index';
 
 export interface Project {
@@ -174,7 +170,29 @@ export const projectsData: Project[] = [
     html_url: "https://github.com/saroj-02/Resume-Parser",
     homepage: "https://resume-parser-w5d4.onrender.com",
     image: ResumeParser,
+    status: "completed",
+    type: "ai-ml"
+  },
+  {
+    index: 13,
+    name: "Spam Message Detection System",
+    description: "Spam SMS Detection system is an SMS filtering system built using Machine Learning. The system is built using Python and Flask for the backend and HTML, CSS, and JavaScript for the frontend. The system is built using Machine Learning and the system is built using Python and Flask for the backend and HTML, CSS, and JavaScript for the frontend.",
+    topics: ['Python', 'Streamlit', 'NLP', 'Scikit-Learn', 'NLTK'],
+    html_url: "https://github.com/saroj-02/Spam-Message-Detector",
+    homepage: "https://spam-message-detector-2s05.onrender.com",
+    image: spam_message_detect,
     status: "ongoing",
     type: "ai-ml"
-  }
+  },
+  {
+    index: 14,
+    name: "Resume Screening",
+    description: "",
+    topics: ['Machine Learning', 'NLTK', 'NLP', 'Scikit-learn', 'Streamlit'],
+    html_url: "https://github.com/saroj-02/Resume-Screening",
+    homepage: "https://resume-screening-palm.onrender.com",
+    image: ResumeScreening,
+    status: "ongoing",
+    type: "ai-ml"
+  },
 ];

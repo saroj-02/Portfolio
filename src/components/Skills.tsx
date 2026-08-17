@@ -8,11 +8,11 @@ const skills = [
     subSections: [
       {
         title: 'Core AI & ML',
-        items: ['Machine Learning', 'Deep Learning', 'Neural Networks', 'Natural Language Processing', 'Computer Vision', 'Data Science']
+        items: ['Artificial Intelligence' , 'Machine Learning', 'Deep Learning', 'Neural Networks', 'Natural Language Processing', 'Retrieval-Augmented Generation' , 'Data Analysis' , 'Computer Vision', 'Data Science']
       },
       {
         title: 'Models & Libs',
-        items: ['PyTorch', 'TensorFlow', 'Scikit-Learn', 'Pandas', 'NumPy', 'Hugging Face', 'LangChain']
+        items: ['PyTorch', 'TensorFlow', 'Scikit-Learn', 'Pandas', 'NumPy', 'Matplotlib', 'Streamlit' , 'LangChain']
       }
     ],
     color: 'bg-gradient-to-br from-emerald-500/10 via-teal-100/60 to-cyan-500/10'

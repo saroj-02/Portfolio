@@ -8,7 +8,31 @@ const experiences = [
     company: 'Ravenshaw University',
     location: 'Cuttack, Odisha',
     period: '2024 - present',
-    description: '---'
+    description: 'SGPA : 8.9'
+  },
+  {
+    type: 'work',
+    title: 'AI/ML Engineer',
+    company: 'Skillairo',
+    location: 'Work From Home',
+    period: 'July 2026 - Aug 2026',
+    description: ''
+  },
+  {
+    type: 'work',
+    title: 'Artificial Intelligence',
+    company: 'Pinnacle Labs',
+    location: 'Work From Home',
+    period: 'June 2026 - July 2026',
+    description: 'Built an AI agent using LangChain, integrating it with various APIs for seamless data retrieval. Fine-tuned Gemini 2.0 Turbo for enhanced performance and developed an application to identify and block spam messages using RAG.'
+  },
+  {
+    type: 'work',
+    title: 'Web Development',
+    company: 'InAmigos Foundation',
+    location: 'Work From Home',
+    period: 'April 2026 - May 2026',
+    description: ''
   },
   {
     type: 'work',

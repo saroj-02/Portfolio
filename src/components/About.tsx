@@ -33,11 +33,11 @@ export function About({ isOverlay = false }: { isOverlay?: boolean }) {
 
             <div className="grid grid-cols-2 gap-8 mt-10">
               <div>
-                <h4 className="text-3xl font-bold text-primary mb-1">1+</h4>
+                <h4 className="text-3xl font-bold text-primary mb-1">2+</h4>
                 <p className="text-sm font-medium">Years Experience</p>
               </div>
               <div>
-                <h4 className="text-3xl font-bold text-primary mb-1">10+</h4>
+                <h4 className="text-3xl font-bold text-primary mb-1">20+</h4>
                 <p className="text-sm font-medium">Projects Completed</p>
               </div>
             </div>

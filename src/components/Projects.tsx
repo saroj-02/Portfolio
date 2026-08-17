@@ -50,7 +50,7 @@ export function Projects({ isOverlay = false }: { isOverlay?: boolean }) {
               AI/ML Projects
             </h4>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
             {projectsData
               .filter((project) => project.type === 'ai-ml')
