@@ -22,7 +22,7 @@ export { default as CodeAlpha } from './CodeAlpha.png';
 export { default as Cognifyz } from './Cognifyz.png';
 export { default as Deloitte } from './DataAnalyticsDeloitte.png';
 export { default as ResumeParser } from './ResumeParser.png';
-export { default as spam_message_detect} from './spam_message_Detect.png';
+export { default as spam_message_detect} from './spam_message_detect.png';
 export { default as ResumeScreening} from './ResumeScreening.png';
 export { default as PinnacleLabs } from './PinnacleLabs.png';
 
