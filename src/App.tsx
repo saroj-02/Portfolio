@@ -1,5 +1,5 @@
-import { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
+import { useState, useEffect } from 'react';
+import { motion, useScroll, useSpring } from 'framer-motion';
 import { Navbar, Hero, About, Skills, Projects, Experience, Contact, Footer, Certificates, CustomCursor } from './components';
 
 
@@ -20,9 +20,6 @@ function App() {
     restDelta: 0.001
   });
 
-  // Ref to track if we're currently in a triggered navigate to avoid IO interference
-  const isAutoScrolling = useRef(false);
-
   useEffect(() => {
     const root = window.document.documentElement;
     if (theme === 'dark') {
@@ -34,28 +31,42 @@ function App() {
   }, [theme]);
 
 
-  // Intersection Observer to track active section during scroll
+  // Track the last section whose top has crossed the viewport activation point.
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        // If we're auto-scrolling (navigating), DON'T update activeSection from IO
-        if (isAutoScrolling.current) return;
-        
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      { threshold: 0.4 } // Reasonable threshold for content sections
-    );
+    let animationFrame = 0;
 
-    sections.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
+    const updateActiveSection = () => {
+      animationFrame = 0;
+      const activationPoint = window.innerHeight * 0.35;
+      let currentSection = sections[0];
 
-    return () => observer.disconnect();
+      for (const id of sections) {
+        const element = document.getElementById(id);
+        if (element && element.getBoundingClientRect().top <= activationPoint) {
+          currentSection = id;
+        } else if (element) {
+          break;
+        }
+      }
+
+      setActiveSection(currentSection);
+    };
+
+    const scheduleUpdate = () => {
+      if (!animationFrame) {
+        animationFrame = window.requestAnimationFrame(updateActiveSection);
+      }
+    };
+
+    updateActiveSection();
+    window.addEventListener('scroll', scheduleUpdate, { passive: true });
+    window.addEventListener('resize', scheduleUpdate);
+
+    return () => {
+      window.removeEventListener('scroll', scheduleUpdate);
+      window.removeEventListener('resize', scheduleUpdate);
+      if (animationFrame) window.cancelAnimationFrame(animationFrame);
+    };
   }, []);
 
   const toggleTheme = () => {
@@ -68,14 +79,7 @@ function App() {
 
     const targetEl = document.getElementById(targetId);
     if (targetEl) {
-      isAutoScrolling.current = true;
       targetEl.scrollIntoView({ behavior: 'smooth' });
-      setActiveSection(targetId);
-      
-      // Release the IO lock after smooth scrolling completes
-      setTimeout(() => {
-        isAutoScrolling.current = false;
-      }, 1000);
     }
   };
 

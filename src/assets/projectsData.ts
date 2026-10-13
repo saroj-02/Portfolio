@@ -187,11 +187,33 @@ export const projectsData: Project[] = [
   {
     index: 14,
     name: "Resume Screening",
-    description: "",
+    description: "Developed an AI-powered Resume Screening System using Python, NLP, and Scikit-learn to extract skills, match resumes with job descriptions, calculate relevance scores, and rank candidates for efficient recruitment.",
     topics: ['Machine Learning', 'NLTK', 'NLP', 'Scikit-learn', 'Streamlit'],
     html_url: "https://github.com/saroj-02/Resume-Screening",
     homepage: "https://resume-screening-palm.onrender.com",
     image: ResumeScreening,
+    status: "completed",
+    type: "ai-ml"
+  },
+  {
+    index: 15,
+    name: "PLUTO",
+    description: "Developed an Jarvis-inspired AI voice assistant that converts speech to text, generates intelligent responses using Llama 3.2, and speaks naturally using text-to-speech, enabling hands-free conversational interaction.",
+    topics: ['AI','Machine Learning', 'NLTK', 'NLP', 'Scikit-learn', 'Streamlit'],
+    html_url: "",
+    homepage: "",
+    image: "",
+    status: "ongoing",
+    type: "ai-ml"
+  },
+  {
+    index: 16,
+    name: "GeoAgent",
+    description: "Developed an AI-powered geospatial platform that integrates satellite imagery, location-based analysis, and AI-driven insights to support climate monitoring, environmental analysis, and intelligent decision-making using Microsoft Planetary Computer and Sentinel-2 data.",
+    topics: ['AI','Machine Learning', 'LLMs', 'RAG', 'Scikit-learn', 'Streamlit'],
+    html_url: "",
+    homepage: "",
+    image: "",
     status: "ongoing",
     type: "ai-ml"
   },

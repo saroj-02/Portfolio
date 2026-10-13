@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, Star, Figma } from 'lucide-react';
+import { ExternalLink, Github, Star, Figma, Construction } from 'lucide-react';
 
 interface ProjectCardProps {
   name: string;
@@ -39,12 +39,23 @@ export const ProjectCard = ({
       className="group relative bg-white dark:bg-slate-900 rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-2xl hover:shadow-primary/10 transition-all font-inter"
     >
       <div className="relative h-64 overflow-hidden">
-        <img
-          src={image || 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000'}
-          alt={name}
-          loading="lazy"
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-        />
+        {image ? (
+          <img
+            src={image}
+            alt={name}
+            loading="lazy"
+            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+          />
+        ) : (
+          <div className="w-full h-full flex flex-col items-center justify-center gap-3 bg-gradient-to-br from-slate-100 via-slate-200 to-slate-300 dark:from-slate-800 dark:via-slate-900 dark:to-slate-950 text-primary">
+            <div className="flex h-20 w-20 items-center justify-center rounded-3xl bg-white/80 dark:bg-slate-800/80 shadow-lg">
+              <Construction size={40} strokeWidth={1.5} aria-hidden="true" />
+            </div>
+            <span className="text-sm font-bold uppercase tracking-widest text-slate-600 dark:text-slate-300">
+              In Development
+            </span>
+          </div>
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-6">
           {html_url && (
             <a

@@ -7,15 +7,23 @@ const experiences = [
     title: 'BCA',
     company: 'Ravenshaw University',
     location: 'Cuttack, Odisha',
-    period: '2024 - present',
-    description: 'SGPA : 8.9'
+    period: '2024 - 2027',
+    description: 'SGPA : 9.1'
+  },
+  {
+    type: 'work',
+    title: 'AI Engineer',
+    company: 'ShadowFox',
+    location: 'Work From Home',
+    period: 'Oct 2026 - Present',
+    description: ''
   },
   {
     type: 'work',
     title: 'AI/ML Engineer',
     company: 'Skillairo',
     location: 'Work From Home',
-    period: 'July 2026 - Aug 2026',
+    period: 'July 2026 - Sept 2026',
     description: ''
   },
   {
